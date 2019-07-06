@@ -1,5 +1,6 @@
 package com.bawei.uploadingpicture.model;
 
+import com.bawei.uploadingpicture.bean.Data;
 import com.bawei.uploadingpicture.bean.Uploging;
 
 import io.reactivex.Observable;
@@ -18,8 +19,8 @@ import retrofit2.http.Part;
 public interface IRequest {
     @Multipart
     @POST("user/verify/v1/modifyHeadPic")
-    Observable<Uploging> modifyHeadPic(@Header("userId")String userId,
-                                       @Header("sessionId")String sessionId,
-                                       @Part MultipartBody.Part filepart
+    Observable<Data<Uploging>> modifyHeadPic(@Header("userId")String userId,
+                                            @Header("sessionId")String sessionId,
+                                            @Part MultipartBody.Part filepart
                                        );
 }

@@ -7,7 +7,5 @@ package com.bawei.uploadingpicture.bean;
  * Description:
  */
 public class Uploging {
-    public  String status;
-    public  String message;
     public  String headPath;
 }
